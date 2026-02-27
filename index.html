@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계좌번호</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+  text-align: center; 
+  margin-top: 100px; 
+}
+h1 { font-size: 28px; }
+button { 
+  padding: 15px 25px; 
+  font-size: 18px; 
+  border: none; 
+  background: black; 
+  color: white; 
+  border-radius: 10px; 
+}
+</style>
+</head>
+<body>
+
+<h2>신한은행</h2>
+<h1 id="account">110123456789</h1>
+
+<button onclick="copyAccount()">계좌번호 복사</button>
+
+<script>
+function copyAccount() {
+  const text = document.getElementById("account").innerText;
+  navigator.clipboard.writeText(text);
+  alert("계좌번호가 복사되었습니다.");
+}
+</script>
+
+</body>
+</html>
